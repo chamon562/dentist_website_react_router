@@ -15,7 +15,14 @@ function App() {
         // <Contact />
     <Router>
       <div className="App">
-      <a href={ '/procedures'}>procedures</a>
+      <nav>
+      {/* inside Link tag key word to */}
+        <Link to='/'>Home</Link>{' '}
+        {/* <br/> */}
+        <Link to='/procedures'>See our Procedures</Link>{' '}
+        <Link to='/contact'>Contact Us!</Link> {' '}
+      </nav>
+      {/* <a href={ '/procedures'}>procedures</a> */}
         {/* get react router dom need to install -done*/}
         {/* pass Home Component here */}
         {/* set each component as its own route rap entire return statement set up a router component*/}
