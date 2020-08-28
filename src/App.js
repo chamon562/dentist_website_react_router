@@ -8,6 +8,9 @@ import Home from "./Home";
 import Procedures from "./Procedures";
 import Contact from "./Contact";
 import WidgetShow from './WidgetShow'
+import PatientInfo from './PatientInfo'
+import MapLocation from './MapLocation'
+import Team from './Team'
 
 function App() {
 // add some procedures before the return
@@ -33,6 +36,9 @@ const procedures = [
         {/* <br/> */}
         <Link to='/procedures'>See our Procedures</Link>{' '}
         <Link to='/contact'>Contact Us!</Link> {' '}
+        <Link to='/patient'>Patient Info</Link> {' '}
+        <Link to='/location'>Map and Location</Link> {' '}
+        <Link to='/team'>Our Team</Link> {' '}
       </nav>
       {/* <a href={ '/procedures'}>procedures</a> */}
         {/* get react router dom need to install -done*/}
@@ -46,7 +52,10 @@ const procedures = [
         <Route path='/contact' component={Contact} />
         {/* user render method pass in {(props) => <WidgetShow {...props}/>}*/}
         <Route path='/widgets/:id' render={(props) => <WidgetShow procedures={procedures} {...props}/>} />
-      </div>
+        <Route path='/patient' component={PatientInfo} />
+        <Route path='/location' component={MapLocation} />
+        <Route path='/team' component={Team} />
+     </div>
     </Router>
   );
 }
